@@ -1,0 +1,40 @@
+body {
+    font-family: 'brandon-grotesque';
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #d4d4d4;
+}
+
+.airtable {
+    margin-top: 40px;
+}
+textarea.materialize-textarea {
+    color: #00d058;
+    font-size: 17px;
+    font-weight: 400;
+    border-bottom: none;
+    margin: 0 0 -8px 0;
+    padding: 0;
+}
+
+tr td {
+    border-bottom: 4px solid #d4d4d4;
+    border-right: 4px solid #d4d4d4;
+    padding: 6px;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.airtable table {
+    background-color: #050505;
+    border-radius: 3px;
+}
+.fig-red {
+    color: #f24822;
+}
+.fig-purp {
+    background-color: #c392ff;
+}

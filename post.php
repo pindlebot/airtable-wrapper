@@ -17,36 +17,36 @@ function update_airtable($url, $type, $json, $headers) {
 }
 
 if ( ('POST' == $_SERVER['REQUEST_METHOD']) && (  $_POST['type'] == 'update' )) {
-$id = $_POST['id'];
-$key = $_POST['key'];
-$value = $_POST['value'];
-$url = $airtable_url . '/' . $id;
-$type = 'PATCH';
-$headers = array('Authorization: Bearer ' . $api_key, 'Content-type: application/json');
-$data = array("fields" => array( $key => $value ) );
-$json = json_encode($data);
+  $id = $_POST['id'];
+  $key = $_POST['key'];
+  $value = $_POST['value'];
+  $url = $airtable_url . '/' . $id;
+  $type = 'PATCH';
+  $headers = array('Authorization: Bearer ' . $api_key, 'Content-type: application/json');
+  $data = array("fields" => array( $key => $value ) );
+  $json = json_encode($data);
 
 update_airtable($url, $type, $json, $headers);
 }
 
 if ( ('POST' == $_SERVER['REQUEST_METHOD']) && (  $_POST['type'] == 'delete' )) {
-$id = $_POST['id'];
-$url = $airtable_url . '/' . $id;
-$type = 'DELETE';
-$headers = array('Authorization: Bearer ' . $api_key);
-$json = '';
-
-update_airtable($url, $type, $json, $headers);
+  $id = $_POST['id'];
+  $url = $airtable_url . '/' . $id;
+  $type = 'DELETE';
+  $headers = array('Authorization: Bearer ' . $api_key);
+  $json = '';
+  
+  update_airtable($url, $type, $json, $headers);
 }
 
 if ( ('POST' == $_SERVER['REQUEST_METHOD']) && (  $_POST['type'] == 'create' )) {
-$url = $airtable_url;
-$type = 'POST';
-$headers = array('Authorization: Bearer ' . $api_key, 'Content-type: application/json');
-$value = '';
-$key = array('col_1', 'col_2', 'col_3');
-$data = array("fields" => array( $key[0] => $value, $key[1] => $value, $key[2] => $value ) );
-$json = json_encode($data);
+  $url = $airtable_url;
+  $type = 'POST';
+  $headers = array('Authorization: Bearer ' . $api_key, 'Content-type: application/json');
+  $value = '';
+  $key = array('col_1', 'col_2', 'col_3');
+  $data = array("fields" => array( $key[0] => $value, $key[1] => $value, $key[2] => $value ) );
+  $json = json_encode($data);
 
 update_airtable($url, $type, $json, $headers);
 }
