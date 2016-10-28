@@ -14,6 +14,13 @@ curl_setopt($ch, CURLOPT_URL, $url);
 $entries = curl_exec($ch);
 curl_close($ch);
 $airtable_response = json_decode($entries, TRUE);
+//var_dump($airtable_response);
+
+$key = 'dog';
+$value = 'kat';
+$json = array("fields" => array( $key => $value ) );
+$json = json_encode($json);
+echo $json;
 
 ?>
 <!DOCTYPE html>
@@ -31,13 +38,16 @@ $airtable_response = json_decode($entries, TRUE);
     "stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js">
     </script>
+
     <script src=
     "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js">
     </script>
     <script src=
     "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"
-    type="text/javascript">
-    </script><!--[if lt IE 9]>
+    type="text/javascript"></script>
+    <script src="scripts.js">
+    </script>
+    <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
@@ -49,12 +59,12 @@ $airtable_response = json_decode($entries, TRUE);
                 <table>
                 <?php
                 foreach($airtable_response['records'] as $key => $value) {
-									  echo '<tr id="' . $key . '">';
-                    echo '<td><input id="' . $value['id'] . '" class="' . $key  . '-1" value="' . $value['fields']['col1'] . '"></td>';
-										echo '<td><input id="' . $value['id'] . '" class="' . $key  . '-2" value="' . $value['fields']['col2'] . '"></td>';
-										echo '<td><input id="' . $value['id'] . '" class="' . $key  . '-3" value="' . $value['fields']['col3'] . '"></td>';
-										echo '<td><a class="btn-floating btn waves-effect waves-light red" id="add"><i class="material-icons ' . $key . '" id="delete">delete</i></a></td>';
-										echo '</tr>'
+									  echo '<tr id="r' . $key . '">';
+                                        echo '<td><input class="' . $value['id'] . '" id="c' . $key  . '-1" value="' . $value['fields']['col_1'] . '"></td>';
+										echo '<td><input class="' . $value['id'] . '" id="c' . $key  . '-2" value="' . $value['fields']['col_2'] . '"></td>';
+										echo '<td><input class="' . $value['id'] . '" id="c' . $key  . '-3" value="' . $value['fields']['col_3'] . '"></td>';
+										echo '<td><a class="btn-floating btn waves-effect waves-light red"><i class="material-icons delete" id="i' . $key . '">delete</i></a></td>';
+										echo '</tr>';
                 }
                  ?>
 							  </table>
