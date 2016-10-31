@@ -14,11 +14,12 @@ You can find more Airtable API [tutorials and examples here](http://www.automati
 This repo contains some unnecessary files. For example, I'm using the css framework Materialize to style the project which is not required for it to work.
 
 The essential files are:
-
-|--index.php
-|--settings.php
-|--post.php
-|--js
-   |--scripts.js
+```
+|__index.php
+|__settings.php
+|__post.php
+|__js
+   |__scripts.js
+```
   
 I'm using Gulp to minify css and js but these tools are optional. If you don't want to use Gulp you can safely delete <code>package.json</code> and <code>gulpfile.js</code>.
