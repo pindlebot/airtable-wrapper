@@ -31,9 +31,6 @@ $airtable_response = json_decode($entries, TRUE);
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src=
     "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <script src=
-    "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"
-    type="text/javascript"></script>
     <script src="dist/js/all.min.js"></script>
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -80,7 +77,8 @@ $airtable_response = json_decode($entries, TRUE);
         </div>
         <div class="row">
             <div class="col s12">
-                <p class="center-align">Made with love by <a href="http://www.automationfuel.com">Ben Gardner</a></p>
+                <p class="center-align"><a href="http://scheduletext.com">ScheduleText.com</a> | Made with love by <a href="http://www.automationfuel.com">Ben Gardner</a>.
+                <p class="center-align"><a href="https://github.com/focuswish/airtable-wrapper"><img src="github.png" width="24" />  Fork me on github</a>.</p>
             </div>
         </div>
     </div>
