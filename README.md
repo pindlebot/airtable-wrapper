@@ -3,6 +3,8 @@ A PHP wrapper for Airtable. Use Airtable as a database for your website. This ex
 
 You can see a live demo [here](http://linklamode.com/airtable/). 
 
+![](http://linklamode.com/airtable/screenshot.png)
+
 ## Setup
 Sign up for an Airtable account and note your API key, spreadsheet ID, and table name. Add these to <code>settings.php</code>.
 
