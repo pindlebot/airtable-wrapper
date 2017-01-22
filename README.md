@@ -1,7 +1,7 @@
 # airtable-wrapper
 A PHP wrapper for Airtable. Use Airtable as a database for your website. This example demonstrates both reading and writing from an Airtable base. In other words, data is not only fetched from Airtable but changes you make on the website are reflected in your Airtable in real time. 
 
-You can see a live demo [here](http://scheduletext.com/airtable/). 
+You can see a live demo [here](http://linklamode.com/airtable/). 
 
 ## Setup
 Sign up for an Airtable account and note your API key, spreadsheet ID, and table name. Add these to <code>settings.php</code>.
